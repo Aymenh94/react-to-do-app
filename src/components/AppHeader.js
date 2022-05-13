@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button, { SelectButton } from './Button';
-import TodoModel from './TodoModel';
 import styles from '../styles/modules/app.module.scss';
+import TodoModel from './TodoModel';
 
 function AppHeader() {
   const [modelOpen, setModelOpen] = useState(true);

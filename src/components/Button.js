@@ -7,15 +7,15 @@ const buttonTypes = {
   secondary: 'secondary',
 };
 
-function Button({ children, variant = 'primary' }) {
+function Button({ type, variant = 'primary', children, ...rest }) {
   return (
     <button
+      type={type === 'submit' ? 'submit' : 'button'}
       className={getClasses([
         styles.button,
-        // eslint-disable-next-line no-template-curly-in-string
         styles[`button--${buttonTypes[variant]}`],
       ])}
-      type="button"
+      {...rest}
     >
       {children}
     </button>
